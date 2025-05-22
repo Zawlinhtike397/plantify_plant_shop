@@ -1,0 +1,126 @@
+{
+  "project_info": {
+    "project_number": "97248628227",
+    "project_id": "plant-shop-91901",
+    "storage_bucket": "plant-shop-91901.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:97248628227:android:63977ba87c0f3e9b4b8836",
+        "android_client_info": {
+          "package_name": "com.example.plantshop_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "97248628227-9vop96r311o84ntm2jismsto1i7l2sgu.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAcstj_pwch27bBTYJT1b_CVUsmeoxa93g"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "97248628227-9vop96r311o84ntm2jismsto1i7l2sgu.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "97248628227-6al7vfkd3ub42q4ak9v0ti2gebenl5tn.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.plantshopApp"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:97248628227:android:7fe7e13c645a7c2d4b8836",
+        "android_client_info": {
+          "package_name": "com.example.plantui_heyflutter"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "97248628227-a86sks60a5nc0ro69g991gncv2ijvrnf.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.plantui_heyflutter",
+            "certificate_hash": "29289f09985a8d03429a3d6c37f8ac0f307ee73a"
+          }
+        },
+        {
+          "client_id": "97248628227-9vop96r311o84ntm2jismsto1i7l2sgu.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAcstj_pwch27bBTYJT1b_CVUsmeoxa93g"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "97248628227-9vop96r311o84ntm2jismsto1i7l2sgu.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "97248628227-6al7vfkd3ub42q4ak9v0ti2gebenl5tn.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.plantshopApp"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:97248628227:android:68c81889a3e2f76b4b8836",
+        "android_client_info": {
+          "package_name": "com.plantshop.app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "97248628227-9vop96r311o84ntm2jismsto1i7l2sgu.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAcstj_pwch27bBTYJT1b_CVUsmeoxa93g"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "97248628227-9vop96r311o84ntm2jismsto1i7l2sgu.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "97248628227-6al7vfkd3ub42q4ak9v0ti2gebenl5tn.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.plantshopApp"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
