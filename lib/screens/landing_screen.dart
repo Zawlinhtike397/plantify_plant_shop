@@ -20,38 +20,80 @@ class LandingScreen extends StatelessWidget {
             builder: (context, pageControllerManager, child) {
               return Column(
                 children: [
-                  const SizedBox(height: 10),
+                  const SizedBox(height: 20),
                   const SkipButton(),
-                  SizedBox(
-                    height: MediaQuery.of(context).size.height * 0.41,
-                    child: PageViewCarousel(
-                        pageControllerManager: pageControllerManager),
-                  ),
-                  const PageIndicator(),
-                  RichText(
-                    text: TextSpan(
+                  Expanded(
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        TextSpan(
-                          text: "Enjoy your\nlife with",
-                          style: Theme.of(context).textTheme.titleLarge,
+                        SizedBox(
+                          height: MediaQuery.of(context).size.height > 800
+                              ? MediaQuery.of(context).size.height * 0.45
+                              : MediaQuery.of(context).size.height * 0.41,
+                          child: PageViewCarousel(
+                              pageControllerManager: pageControllerManager),
                         ),
-                        TextSpan(
-                          text: " plants",
-                          style:
-                              Theme.of(context).textTheme.titleLarge!.copyWith(
-                                    fontWeight: FontWeight.bold,
-                                  ),
-                        )
+                        const PageIndicator(),
+                        RichText(
+                          text: TextSpan(
+                            children: [
+                              TextSpan(
+                                text: "Enjoy your\nlife with",
+                                style: Theme.of(context)
+                                    .textTheme
+                                    .titleLarge!
+                                    .copyWith(
+                                      fontWeight: FontWeight.w100,
+                                      fontSize:
+                                          MediaQuery.of(context).size.height >
+                                                      800 &&
+                                                  MediaQuery.of(context)
+                                                          .size
+                                                          .width >
+                                                      600
+                                              ? 50.0
+                                              : Theme.of(context)
+                                                  .textTheme
+                                                  .titleLarge!
+                                                  .fontSize,
+                                    ),
+                              ),
+                              TextSpan(
+                                text: " plants",
+                                style: Theme.of(context)
+                                    .textTheme
+                                    .titleLarge!
+                                    .copyWith(
+                                      fontWeight: FontWeight.bold,
+                                      color: Colors.black54,
+                                      fontSize:
+                                          MediaQuery.of(context).size.height >
+                                                      800 &&
+                                                  MediaQuery.of(context)
+                                                          .size
+                                                          .width >
+                                                      600
+                                              ? 50.0
+                                              : Theme.of(context)
+                                                  .textTheme
+                                                  .titleLarge!
+                                                  .fontSize,
+                                    ),
+                              )
+                            ],
+                            style: const TextStyle(
+                              color: Colors.black,
+                              fontSize: 38.0,
+                              letterSpacing: 2.0,
+                            ),
+                          ),
+                        ),
+                        const SizedBox(height: 40),
+                        NextButton(
+                            pageControllerManager: pageControllerManager),
                       ],
-                      style: const TextStyle(
-                        color: Colors.black,
-                        fontSize: 38.0,
-                        letterSpacing: 2.0,
-                      ),
                     ),
                   ),
-                  const SizedBox(height: 40),
-                  NextButton(pageControllerManager: pageControllerManager),
                 ],
               );
             },

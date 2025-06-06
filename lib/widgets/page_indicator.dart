@@ -5,7 +5,7 @@ import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 import '../controllers/landing_screen_controller.dart';
 
 class PageIndicator extends StatelessWidget {
-  const PageIndicator({Key? key}) : super(key: key);
+  const PageIndicator({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -13,8 +13,8 @@ class PageIndicator extends StatelessWidget {
       padding: const EdgeInsets.symmetric(vertical: 32.0),
       child: SmoothPageIndicator(
         controller:
-        Provider.of<LandingScreenControllerManager>(context, listen: false)
-            .controller,
+            Provider.of<LandingScreenControllerManager>(context, listen: false)
+                .controller,
         count: 3,
         effect: ExpandingDotsEffect(
           dotHeight: 6.0,

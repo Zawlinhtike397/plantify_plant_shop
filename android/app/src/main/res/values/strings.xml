@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">Plantify Plant Shop</string>
+    <string name="facebook_app_id">1463144057902441</string>
+    <string name="fb_login_protocol_scheme">fb1463144057902441</string>
+    <string name="facebook_client_token">9d8f31ac14e844982e1eac45c79447ae</string>
+</resources>

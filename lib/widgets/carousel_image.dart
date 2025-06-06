@@ -3,13 +3,13 @@ import 'package:flutter/material.dart';
 class CarouselImage extends StatelessWidget {
   final String imgPath;
 
-  const CarouselImage({required this.imgPath,super.key});
+  const CarouselImage({required this.imgPath, super.key});
 
   @override
   Widget build(BuildContext context) {
-    return  Image(
+    return Image(
       image: AssetImage(imgPath),
-      fit: BoxFit.scaleDown,
+      fit: BoxFit.contain,
     );
   }
 }

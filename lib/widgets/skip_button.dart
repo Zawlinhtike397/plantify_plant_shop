@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-
-import '../screens/login_screen.dart';
+import 'package:go_router/go_router.dart';
 
 class SkipButton extends StatelessWidget {
   const SkipButton({super.key});
@@ -12,14 +11,16 @@ class SkipButton extends StatelessWidget {
       children: [
         TextButton(
           onPressed: () {
-            Navigator.pushReplacement(
-              context,
-              MaterialPageRoute(builder: (context) => const LoginScreen()),
-            );
+            context.go('/login');
           },
           child: Text(
             'Skip',
-            style: Theme.of(context).textTheme.bodyMedium,
+            style: Theme.of(context).textTheme.bodyMedium!.copyWith(
+                  fontSize: MediaQuery.of(context).size.height > 800 &&
+                          MediaQuery.of(context).size.width > 600
+                      ? 35.0
+                      : 20.0,
+                ),
           ),
         ),
       ],

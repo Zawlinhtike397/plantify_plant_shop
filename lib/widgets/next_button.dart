@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 
 import '../controllers/landing_screen_controller.dart';
-import '../screens/login_screen.dart';
 
 class NextButton extends StatelessWidget {
   final LandingScreenControllerManager pageControllerManager;
@@ -19,10 +19,7 @@ class NextButton extends StatelessWidget {
           if (pageControllerManager.currentPage < 2) {
             pageControllerManager.nextPage();
           } else {
-            Navigator.pushReplacement(
-              context,
-              MaterialPageRoute(builder: (context) => const LoginScreen()),
-            );
+            context.go('/login');
           }
         },
         child: const Icon(Icons.arrow_forward, size: 50),

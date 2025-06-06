@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 import 'package:plantshop_app/plant_data.dart';
 import 'package:plantshop_app/screens/plant_details_screen.dart';
 import 'package:plantshop_app/widgets/plant_card.dart';

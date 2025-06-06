@@ -16,7 +16,7 @@ class PageViewCarousel extends StatelessWidget {
   Widget build(BuildContext context) {
     return PageView(
       controller: pageControllerManager.controller,
-      onPageChanged: (index) => 
+      onPageChanged: (index) =>
           pageControllerManager.updateCurrentPage(index.toDouble()),
       children: const [
         CarouselImage(imgPath: snakePlantImage),
