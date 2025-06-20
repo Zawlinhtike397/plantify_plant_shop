@@ -46,7 +46,8 @@ dependencies:
   google_sign_in: ^6.2.2
   flutter_facebook_auth: ^7.1.2
   go_router: ^15.1.2
-
+  google_fonts: ^6.2.1
+  
 dev_dependencies:
   flutter_test:
     sdk: flutter
@@ -84,14 +85,14 @@ flutter:
   # "family" key with the font family name, and a "fonts" key with a
   # list giving the asset and other descriptors for the font. For
   # example:
-  fonts:
-    - family: Poppins
-      fonts:
-       - asset: assets/fonts/Poppins-Bold.ttf
-         weight: 700
-       - asset: assets/fonts/Poppins-Light.ttf
-       - asset: assets/fonts/Poppins-Medium.ttf
-         weight: 400
+  # fonts:
+  #   - family: Poppins
+  #     fonts:
+  #      - asset: assets/fonts/Poppins-Bold.ttf
+  #        weight: 700
+  #      - asset: assets/fonts/Poppins-Light.ttf
+  #      - asset: assets/fonts/Poppins-Medium.ttf
+  #        weight: 400
 
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/to/font-from-package

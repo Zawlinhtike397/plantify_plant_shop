@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:plantshop_app/providers/cart_provider_state.dart';
 import 'package:plantshop_app/screens/forgot_password_screen.dart';
 import 'package:plantshop_app/screens/home_screen.dart';
 import 'package:plantshop_app/screens/landing_screen.dart';
 import 'package:plantshop_app/screens/login_screen.dart';
-import 'package:plantshop_app/screens/plant_details_screen.dart';
 import 'package:plantshop_app/screens/register_screen.dart';
 import 'package:plantshop_app/screens/reset_password_screen.dart';
 import 'package:provider/provider.dart';
@@ -67,7 +67,7 @@ class MyApp extends StatelessWidget {
       title: 'Plants Shop',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        fontFamily: 'Inter',
+        fontFamily: GoogleFonts.inter().fontFamily,
         colorScheme: ColorScheme.fromSeed(
           seedColor: const Color.fromARGB(255, 130, 170, 87),
           primary: const Color.fromARGB(255, 129, 163, 71),
@@ -117,6 +117,7 @@ class MyApp extends StatelessWidget {
             0xff161D0D,
           ),
         ),
+        useMaterial3: true,
       ),
     );
   }

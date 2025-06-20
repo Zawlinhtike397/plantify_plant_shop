@@ -85,7 +85,7 @@ class _CartScreenState extends State<CartScreen> {
                   height: MediaQuery.of(context).size.height * 0.4,
                   child: ListView.builder(
                     itemCount: cart.length,
-                    itemBuilder: (context, i) {
+                    itemBuilder: (context, index) {
                       return Container(
                         height: MediaQuery.of(context).size.width * 0.29,
                         padding: const EdgeInsets.symmetric(
@@ -110,7 +110,7 @@ class _CartScreenState extends State<CartScreen> {
                                 child: Row(
                                   children: [
                                     Image.asset(
-                                      (cart[i]['imageUrl']),
+                                      (cart[index]['imageUrl']),
                                       fit: BoxFit.fitWidth,
                                       // width: MediaQuery.of(context).size.width * 0.2,
                                     ),
@@ -127,7 +127,7 @@ class _CartScreenState extends State<CartScreen> {
                                                 MainAxisAlignment.spaceBetween,
                                             children: [
                                               Text(
-                                                cart[i]['name'],
+                                                cart[index]['name'],
                                                 style: Theme.of(context)
                                                     .textTheme
                                                     .bodyMedium!
@@ -138,7 +138,7 @@ class _CartScreenState extends State<CartScreen> {
                                                     ),
                                               ),
                                               Text(
-                                                '\$${((cart[i]['price'] * cart[i]['quantity'] as double).toStringAsFixed(2))}',
+                                                '\$${((cart[index]['price'] * cart[index]['quantity'] as double).toStringAsFixed(2))}',
                                                 style: Theme.of(context)
                                                     .textTheme
                                                     .bodySmall,
@@ -150,7 +150,7 @@ class _CartScreenState extends State<CartScreen> {
                                                 MainAxisAlignment.spaceBetween,
                                             children: [
                                               Text(
-                                                  '\$${(cart[i]['price'] as double).toStringAsFixed(2)}',
+                                                  '\$${(cart[index]['price'] as double).toStringAsFixed(2)}',
                                                   style: Theme.of(context)
                                                       .textTheme
                                                       .bodySmall),
@@ -159,13 +159,14 @@ class _CartScreenState extends State<CartScreen> {
                                                   IconButton(
                                                     onPressed: () {
                                                       setState(() {
-                                                        if (cart[i]
+                                                        if (cart[index]
                                                                 ['quantity'] >
                                                             1) {
                                                           cartProvider
                                                               .updateQuantity(
-                                                                  i,
-                                                                  cart[i]['quantity'] -
+                                                                  index,
+                                                                  cart[index][
+                                                                          'quantity'] -
                                                                       1);
                                                         }
                                                       });
@@ -176,9 +177,9 @@ class _CartScreenState extends State<CartScreen> {
                                                     iconSize: 20,
                                                   ),
                                                   Text(
-                                                    cart[i]['quantity'] < 10
-                                                        ? '0${cart[i]['quantity']}'
-                                                        : '${cart[i]['quantity']}',
+                                                    cart[index]['quantity'] < 10
+                                                        ? '0${cart[index]['quantity']}'
+                                                        : '${cart[index]['quantity']}',
                                                     style: Theme.of(context)
                                                         .textTheme
                                                         .bodySmall,
@@ -187,8 +188,9 @@ class _CartScreenState extends State<CartScreen> {
                                                     onPressed: () {
                                                       setState(() {
                                                         cartProvider.updateQuantity(
-                                                            i,
-                                                            cart[i]['quantity'] +
+                                                            index,
+                                                            cart[index][
+                                                                    'quantity'] +
                                                                 1);
                                                       });
                                                     },
@@ -216,7 +218,7 @@ class _CartScreenState extends State<CartScreen> {
                               right: 3,
                               child: IconButton(
                                 onPressed: () {
-                                  cartProvider.removeCartData(cart[i]);
+                                  cartProvider.removeCartData(cart[index]);
                                 },
                                 icon: const Icon(
                                   Icons.close,
